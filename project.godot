@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="Godot-experiments"
+run/main_scene="res://noise_generation/noise_generation.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"

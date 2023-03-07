@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://e88axu7l1d3e"]
+
+[ext_resource type="Script" path="res://noise_generation/noise_generation.gd" id="1_vxag1"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mt3k0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ycmfo"]
+font_size = 10
+
+[node name="root" type="Node2D"]
+script = ExtResource("1_vxag1")
+noise_type = 1
+noise_octaves = 7
+
+[node name="preview" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(323.75, 323.75)
+scale = Vector2(1.2666, 1.2666)
+texture = SubResource("NoiseTexture2D_mt3k0")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 832.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+offset_right = 320.0
+offset_bottom = 648.0
+
+[node name="label_noisetype" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Noise Type"
+label_settings = SubResource("LabelSettings_ycmfo")
+
+[node name="select_noisetype" type="ItemList" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+max_text_lines = 6
+auto_height = true
+text_overrun_behavior = 0
+
+[node name="label_fractaltype" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Fractal Type"
+label_settings = SubResource("LabelSettings_ycmfo")
+
+[node name="select_fractaltype" type="ItemList" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+max_text_lines = 6
+auto_height = true
+text_overrun_behavior = 0
