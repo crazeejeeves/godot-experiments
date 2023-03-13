@@ -1,0 +1,110 @@
+[gd_scene load_steps=3 format=3 uid="uid://l2imaovngp4o"]
+
+[ext_resource type="Theme" uid="uid://ckiub1d61j00q" path="res://assets/theme_experimental.tres" id="1_f2nq2"]
+[ext_resource type="Texture2D" uid="uid://bnfkql06x4ukn" path="res://ui_components/ui-protoype.png" id="2_av0fp"]
+
+[node name="dialog_bg" type="NinePatchRect"]
+custom_minimum_size = Vector2(0, 120)
+offset_right = 256.0
+offset_bottom = 256.0
+theme = ExtResource("1_f2nq2")
+texture = ExtResource("2_av0fp")
+region_rect = Rect2(-0.211121, 0.0343952, 64.0951, 64.4221)
+patch_margin_left = 59
+patch_margin_top = 5
+patch_margin_right = 59
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="window_margins" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="window_body" type="VBoxContainer" parent="window_margins"]
+layout_mode = 2
+
+[node name="header" type="ColorRect" parent="window_margins/window_body"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+color = Color(0.14902, 0.176471, 0.176471, 1)
+
+[node name="header_margins" type="MarginContainer" parent="window_margins/window_body/header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+
+[node name="header_container" type="HBoxContainer" parent="window_margins/window_body/header/header_margins"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="title" type="Label" parent="window_margins/window_body/header/header_margins/header_container"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 1
+text = "Title"
+vertical_alignment = 1
+
+[node name="collapse" type="Button" parent="window_margins/window_body/header/header_margins/header_container"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "_"
+
+[node name="close" type="Button" parent="window_margins/window_body/header/header_margins/header_container"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "X"
+
+[node name="content" type="PanelContainer" parent="window_margins/window_body"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="footer" type="ColorRect" parent="window_margins/window_body"]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+color = Color(0.14902, 0.176471, 0.176471, 1)
+
+[node name="footer_margins" type="MarginContainer" parent="window_margins/window_body/footer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 2
+
+[node name="footer_container" type="HBoxContainer" parent="window_margins/window_body/footer/footer_margins"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="ok" type="Button" parent="window_margins/window_body/footer/footer_margins/footer_container"]
+layout_mode = 2
+text = "OK"
+
+[node name="cancel" type="Button" parent="window_margins/window_body/footer/footer_margins/footer_container"]
+layout_mode = 2
+text = "Cancel"
+
+[node name="apply" type="Button" parent="window_margins/window_body/footer/footer_margins/footer_container"]
+layout_mode = 2
+text = "Apply"

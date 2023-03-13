@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://pktxac24pusc"]
+
+[ext_resource type="PackedScene" uid="uid://l2imaovngp4o" path="res://ui_components/components/base_dialog.tscn" id="1_21kwy"]
+
+[node name="root" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="dialog" parent="." instance=ExtResource("1_21kwy")]
+layout_mode = 0
