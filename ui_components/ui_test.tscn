@@ -16,4 +16,9 @@ script = ExtResource("1_mf5ty")
 
 [node name="dialog" parent="." instance=ExtResource("1_21kwy")]
 layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 191.0
+offset_bottom = 203.0
 action_flags = 7

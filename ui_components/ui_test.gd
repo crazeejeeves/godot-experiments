@@ -5,12 +5,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-    dialog.title = "The Magic Box"
+    dialog.title = "This is a test to see how long it goes"
     dialog.ok_pressed.connect(on_ok)
     dialog.apply_pressed.connect(on_apply)
-
-    var temp: PackedScene = load("res://ui_components/test_content.tscn")
-    dialog.add_content(temp.instantiate())
 
 
 func _process(_delta: float) -> void:
