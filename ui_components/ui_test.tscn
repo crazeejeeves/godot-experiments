@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bysm3neh65fy6"]
+
+[ext_resource type="PackedScene" uid="uid://xwn2ksvvw3mb" path="res://ui_components/components/ui_base_dialog.tscn" id="1_21kwy"]
+[ext_resource type="Script" path="res://ui_components/ui_test.gd" id="1_43ypa"]
+[ext_resource type="Script" path="res://core/threading/job_controller.gd" id="1_mf5ty"]
+
+[node name="root" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_43ypa")
+
+[node name="job_controller" type="Node" parent="."]
+script = ExtResource("1_mf5ty")
+
+[node name="dialog" parent="." instance=ExtResource("1_21kwy")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 191.0
+offset_bottom = 203.0
+action_flags = 7
